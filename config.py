@@ -23,19 +23,19 @@ OWNER_ID = 1256202333
 PORT = "8080"
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://prasad:<password>@cluster0.an5a5sf.mongodb.net/?retryWrites=true&w=majority")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://prasad:12345@cluster0.an5a5sf.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001741057475"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI'm Science Edu Channel File share bot.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "1155042800").split()):
+    for x in (os.environ.get("ADMINS", "1155042800 1879269300 1174588770  5719771565 5018262868 1331744092 5584593509").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
